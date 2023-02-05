@@ -1,6 +1,5 @@
 echo "Download meilisearch from https://github.com/meilisearch/meilisearch/releases/latest and\
  save filename meilisearch as a file in the workdir."  
-
 port=7700
 key=$(openssl rand -base64 24)
 chmod a+x meilisearch                                   
