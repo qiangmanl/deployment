@@ -5,4 +5,5 @@ echo more config see the config.yaml
 echo Download newest version from https://github.com/Dreamacro/clash/releases/latest
 echo prepare a available config.yaml in workdir
 echo initual configuration directory need MMDB ,download manual  if Can't automatical Download.
+echo mmdb must be named Country.mmdb
 ./clash -d .  
