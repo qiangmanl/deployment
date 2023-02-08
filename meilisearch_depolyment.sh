@@ -1,7 +1,15 @@
 echo "Download meilisearch from https://github.com/meilisearch/meilisearch/releases/latest and\
  save filename meilisearch as a file in the workdir."  
-port=7700
-key=$(openssl rand -base64 24)
+key=$(cat  master-key.txt)
+
+if [ -n "$key" ]; then
+    echo master-key using file is $key
+else
+    key=$(openssl rand -base64 24)
+    echo create new master-key is $key
+fi
+echo $key >master-key.txt
+
 chmod a+x meilisearch                                   
 
 sudo mv meilisearch /usr/bin
